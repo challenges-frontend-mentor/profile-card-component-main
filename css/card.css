@@ -1,0 +1,112 @@
+:root{
+  /* primarios */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  /* neutral */
+  --dark-gray: hsl(0, 0%, 59%);
+
+}
+html {
+  background: hsl(185, 64%, 39%);
+  position: relative;
+}
+
+html::after,
+html::before{
+  display: block;
+  position: fixed;
+  content: "";
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: var(--dark-cyan);
+  z-index: -1;
+  
+}
+
+html::after{
+  top: -275px;
+  left: -275px;
+
+}
+
+html::before{
+  bottom: -275px;
+  right: -275px;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: sans-serif;
+  
+}
+
+.card{
+  width: 320px;
+  height: 350px;
+  background: whitesmoke ;
+  border-radius: 10px;
+}
+
+.card-header{
+  background-image: url(../assent/image/pattern-card.svg);
+  height: 120px;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-image{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  border: 5px solid whitesmoke;
+  background-color: whitesmoke;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  /* background-color: red; */
+
+}
+
+.card-text{
+  margin: 0;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.card-text-light{
+  color: grey;
+  font-weight: normal;
+
+}
+
+.card-footer{
+ display: flex; 
+ border-top: 1px solid grey;
+
+
+}
+
+.card-stats{
+  width: 100%;
+  text-align: center;
+}
+
+.card-number{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  line-height: 1.5;
+}
